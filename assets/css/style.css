@@ -597,21 +597,10 @@ a { color: inherit; }
 }
 
 @media (max-width: 480px) {
-  .wrap { padding: 20px 14px 60px; }
-  .app-title { font-size: 1.9rem; }
   .summary-grid { grid-template-columns: 1fr; }
   .ledger-row { flex-wrap: wrap; }
   .ledger-row .amount { text-align: left; }
-  .venc-row { flex-wrap: wrap; }
-  .chart-box { max-width: 100%; }
-  .modal { max-width: 100%; margin: 0 10px; }
-  .section-title { flex-wrap: wrap; gap: 8px; }
-  .add-btn, .icon-btn, .status-tag, .btn-primary, .btn-secondary {
-    min-height: 40px;
-  }
-  .month-label { font-size: 1.35rem; min-width: 0; }
 }
-
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
