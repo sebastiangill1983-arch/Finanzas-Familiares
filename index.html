@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finanzas Familiares</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#1c3a5e">
+<link rel="icon" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="login-screen">
+  <div class="login-card">
+    <h1 class="login-title">Finanzas<br>Familiares</h1>
+    <p class="login-sub">Tu cuaderno de gastos, ahora en la nube.</p>
+
+    <form id="login-form">
+      <div class="field">
+        <label for="email">Email</label>
+        <input type="email" id="email" required autocomplete="email">
+      </div>
+      <div class="field">
+        <label for="password">Contraseña</label>
+        <input type="password" id="password" required autocomplete="current-password" minlength="6">
+      </div>
+      <button type="submit" class="btn-primary" id="submit-btn">Ingresar</button>
+      <div class="form-msg" id="form-msg"></div>
+    </form>
+
+    <div class="switch-mode">
+      <span id="switch-text">¿No tenés cuenta?</span>
+      <button type="button" id="switch-btn">Crear cuenta</button>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="assets/js/auth.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker.register("service-worker.js").catch(() => {});
+    });
+  }
+</script>
+</body>
+</html>
