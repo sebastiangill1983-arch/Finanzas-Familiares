@@ -1,4 +1,4 @@
-const CACHE_NAME = "finanzas-familiares-v1";
+const CACHE_NAME = "finanzas-familiares-v3";
 const ARCHIVOS_BASE = [
   "index.html",
   "app.html",
